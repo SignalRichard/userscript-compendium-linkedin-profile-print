@@ -55,7 +55,7 @@ jobs:
     - name: Node Package Restore
       run: ./../build/scripts/Install-NodePackages.ps1
     - name: ESLint
-      run: ./../Test-JavaScript.ps1 -FileName "${{ env.ARTIFACT_NAME}}"
+      run: ./../build/scripts/Test-JavaScript.ps1 -FileName "${{ env.PACKAGE_NAME}}"
   Build:
     runs-on: ubuntu-latest
     needs:
