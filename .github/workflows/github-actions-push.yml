@@ -53,7 +53,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Node Package Restore
-      run: ./build/scripts/Install-NodePackages.ps1
+      run: ./../build/scripts/Install-NodePackages.ps1
     - name: ESLint
       run: ./../Test-JavaScript.ps1 -FileName "${{ env.ARTIFACT_NAME}}"
   Build:
@@ -69,7 +69,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Update Version
-      run: ./build/scripts/Update-Version.ps1 -FilePath "${{ env.PACKAGE_NAME }}" -Version "${{ needs.SemanticVersion.outputs.semantic_version }}"
+      run: ./../build/scripts/Update-Version.ps1 -FilePath "${{ env.PACKAGE_NAME }}" -Version "${{ needs.SemanticVersion.outputs.semantic_version }}"
     - name: Publish Artifact
       uses: actions/upload-artifact@v3
       with:
