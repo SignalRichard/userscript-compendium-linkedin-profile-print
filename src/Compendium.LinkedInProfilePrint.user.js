@@ -11,6 +11,7 @@
 // @source       https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print
 // @match        https://www.linkedin.com/in/*
 // @run-at       context-menu
+// @license      MIT
 // ==/UserScript==
 
 (async function() {
