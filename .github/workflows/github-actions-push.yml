@@ -9,6 +9,7 @@ concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
 env:
+  SCRIPT_NAME: Compendium.LinkedInProfilePrint.user
   PACKAGE_NAME: Compendium.LinkedInProfilePrint.user.js
   ARTIFACT_NAME: userscript
   NODE_VERSION: '18'
@@ -55,7 +56,7 @@ jobs:
     - name: Node Package Restore
       run: ./../build/scripts/Install-NodePackages.ps1
     - name: ESLint
-      run: ./../build/scripts/Test-JavaScript.ps1 -FileName "${{ env.PACKAGE_NAME}}"
+      run: ./../build/scripts/Test-JavaScript.ps1 -FileName "${{ env.SCRIPT_NAME}}.ts"
   Build:
     runs-on: ubuntu-latest
     needs:
@@ -69,7 +70,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Update Version
-      run: ./../build/scripts/Update-Version.ps1 -FilePath "${{ env.PACKAGE_NAME }}" -Version "${{ needs.SemanticVersion.outputs.semantic_version }}"
+      run: ./../build/scripts/Update-Version.ps1 -FilePath "${{ env.SCRIPT_NAME }}.ts" -Version "${{ needs.SemanticVersion.outputs.semantic_version }}"
+    - name: Build TypeScript
+      run: ./../build/scripts/Build-TypeScript.ps1
     - name: Publish Artifact
       uses: actions/upload-artifact@v3
       with:
