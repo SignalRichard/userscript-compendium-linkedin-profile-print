@@ -60,6 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
     - SemanticVersion
+    - Test
     defaults:
       run:
         shell: pwsh
