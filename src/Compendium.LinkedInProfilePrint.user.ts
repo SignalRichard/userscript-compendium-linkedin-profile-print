@@ -4,7 +4,6 @@
 // @copyright    Copyright (c) 2023 Richard Bolhofer
 // @version      latest
 // @description  Prepares a LinkedIn profile for printing by removing extraneous sections.
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
 // @grant        none
 // @author       SignalRichard
 // @homepage     https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print
