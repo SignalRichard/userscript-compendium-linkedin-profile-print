@@ -22,7 +22,6 @@
         height += scrollHeight;
         await new Promise(r => setTimeout(r, 1000));
     } while(height < document.body.scrollHeight);
-    [...document.getElementsByClassName("scaffold-layout__content--has-aside")].forEach((item) => { item.parentElement?.setAttribute("class", ""); item.setAttribute("class", ""); });
     [...document.getElementsByClassName("scaffold-layout__aside"),
     ...document.getElementsByTagName("header"),
     ...document.getElementsByTagName("footer")].forEach((item) => { if(item) { item.remove(); } });
