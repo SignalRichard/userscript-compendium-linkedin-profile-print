@@ -1,8 +1,8 @@
-## [1.1.1](https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print/compare/v1.1.0...v1.1.1) (2023-06-17)
+## [1.1.2](https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print/compare/v1.1.1...v1.1.2) (2023-06-20)
 
 
 ### Bug Fixes
 
-* remove tampermonkey icon ([6edb2b8](https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print/commit/6edb2b80bd6cb6a023dedf2d430424b62c138ad7))
+* user background image placement ([52f27d5](https://github.com/SignalRichard/userscript-compendium-linkedin-profile-print/commit/52f27d59d82e3887dd627e44a12d1bca20185d39))
 
 
